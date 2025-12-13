@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Coral and Microplastics</title>
+</head>
+
+
+<body>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="code_pre.html">Preprocessing</a></li>
+        <li><a href="code_model.html">Model Building</a></li>
+        <li><a href="results.html" class="active">Results/Discussion</a></li>
+        <li style="float:right"><a href="references.html">References</a></li>
+    </ul>
+    <div style="width: 90%;">
+        <h1>RESULTS AND DISCUSSION</h1>
+        <h2>Observed Coral Cover Pattern</h2>
+        <p>Using the cleaned AIMS hard coral dataset, mean coral cover was calculated across years to establish a baseline for coral dynamics on the Great Barrier Reef.
+             The resulting time series shows substantial variability. This reflects known disturbance and recovery processes affecting reef systems such as bleaching, 
+             overfishing, and human interferance. This observed variability motivates the use of a dynamic modeling framework rather than assuming coral cover is 
+             constant through time.</p>
+        <h2>Spatial Variation In Microplastics</h2>
+        <p>Marine microplastics data reveal a strong spatial variability in concentration. After filtering and scaling, regional mean microplastic levels differ across
+             the Northern, Central, and Southern GBR. These differences are carried forward into the model as region-specific initial conditions, ensuring that each 
+             region’s dynamics reflect its observed pollution. </p>
+        <h2>Dynamics Without Allee Effect</h2>
+        <p>In the absence of an Allee effect, coral growth follows a modified logistic trajectory in which recovery is slowed, by microplastic stress. The logistic 
+            component allows coral cover to increase when population size is low, while the microplastic inhibition term reduces growth in proportion to both coral 
+            cover and microplastic concentration. As a result, coral cover does not collapse outright under a constant microplastic input rate, but instead stabilizes 
+            at a reduced equilibrium below the carrying capacity.</p>
+        <p>Microplastic dynamics in this model reveal important feedbacks between coral health and pollution. Although the input rate of microplastics is identical across
+             all regions, microplastic concentrations diverge over time. This is due to how coral-dependent removal varies regionally. Regions that start with higher 
+             coral cover maintain a stronger removal capacity. This allows microplastic concentrations to decline despite continued input. On the other hand, regions 
+             with lower coral cover remove microplastics more slowly, thus leading to accumulation. Biologically, this suggests that relatively healthy reefs may 
+             partially buffer themselves against pollution, while already degraded reefs experience increasing stress.</p>
+        <h2>Dynamics With Allee Effect</h2>
+        <p>When an Allee effect is included, coral population dynamics become much more fragile. The Allee term reduces coral growth at low population sizes, representing
+             biological processes such as reduced reproductive success. Under these conditions, coral populations starting closer to the Allee threshold recover more 
+             slowly and may fail to recover altogether.</p>
+        <p>This increased vulnerability strongly affects microplastic dynamics. In regions where coral cover declines toward or below the Allee threshold, microplastic 
+            removal weakens dramatically because the coral population can no longer trap or retain particles efficiently. Consequently, microplastic concentrations 
+            increase even though the external input rate remains constant. In contrast, regions with sufficiently high coral cover avoid crossing the threshold, retain 
+            removal capacity, and continue to reduce microplastic concentrations over time. These outcomes illustrate how ecological thresholds can transform gradual 
+            environmental stress into abrupt, region-specific degradation.</p>
+        <h2>Discussion</h2>
+        <p>The varied trends across areas mostly stem from how much coral was there at first and the amount of microplastics present, both pulled straight from actual 
+            measurements. Although each region gets the same level of plastic input, outcomes differ. Biologically, damaged reefs tend to weaken further over time. 
+            When there’s little coral left, regrowth becomes harder while constant pollution stays a bigger threat. Yet areas rich in coral handle pressure better since 
+            strong colonies filter out tiny plastics more effectively. </p>
+        <p>This project reveals how corals and microplastics mix differently depending on location, even if pollution levels are identical. Real-world data at the start 
+            shows how coral growth and plastic cleanup influence each other strongly over time. If you add an Allee effect, areas with less coral struggle harder because 
+            dropping too low lowers the ability for the coral to bounce back and lets pollutants pile up faster. </p>
+        <p>These findings stress the urgency of reducing microplastic accumulation in Australian coral reefs. Without intervention systems may be pushed to collapse faster 
+            than anticipated leading to many global food crises, ecosystem death and loss in financial stability within those regions. </p>
+        <h2>Future Work</h2>
+        <p>The major plan for future work revolves around the idea of higher accuracy. To do so, the project will no longer be able to focus on the effect that only 
+            microplastics have on the coral reefs. Future work will need to involve other factors such as bleaching events, natural death, and further human impacts on 
+            the biomass of the coral reefs. To implement these changes into the models, new parameters and variables will be added to our ordinary differential equations.
+             These new parameters will be able to encapsulate more of the impact humans and natural disasters have on the coral biomass and will help future generations 
+             understand what measures can be taken to help reduce detrimental effects and encourage more stable conditions for the recovery of the coral. In addition, 
+             more models will need to be developed to display the lone impacts of bleaching, natural disasters, and human effects. These models will be similar to the 
+             time and spatial visualization models. Another thought for future work is to create some sort of simulation that may help reduce the noise of samples taken 
+             just below the surface. This is a very aspirational goal and one that will require a significant amount of trial and error, and it will likely still face 
+             around the same amount of error as the current model from samples taken. Finally, we would love to see increased testing and information surrounding 
+             microplastic impact on the coral growth rates so models can be finely tuned and optimized. </p>
+    </div>
+    
+</body>
+
+</html> 

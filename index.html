@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Coral and Microplastics</title>
+</head>
+
+
+<body>
+
+    <!--Nav Bar-->
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="code_pre.html">Preprocessing</a></li>
+        <li><a href="code_model.html">Model Building</a></li>
+        <li><a href="results.html">Results/Discussion</a></li>
+        <li style="float:right"><a href="references.html">References</a></li>
+    </ul>
+
+    <h1>HOME</h1>
+    <div>
+        <!--Text Section-->
+        <div style="width: 70%; float: left;">
+            <h2>Research Statement</h2>
+            <p>Our primary research idea is to model how microplastic accumulation over time influences coral growth 
+                and reef health. We aim to quantitatively determine how the buildup of microplastics affects recovery 
+                rates and long term sustainability within our oceans. This will be achieved using differential equations 
+                to describe the interaction between pollutant load and the subsequent biological response. By modeling 
+                the accumulation of microplastics around coral reefs and the subsequent rate of growth (or lack thereof) 
+                of the coral system, we can use statistical predictions and modeling techniques to predict the equilibrium, 
+                resilience, and collapse threshold of the coral ecosystem with regards to microplastic pollution.</p>
+            <p>By observing data in the data set collected by the National Center for Environmental Information [1], which 
+                includes a detailed interactive map and other data set variances surrounding marine microplastic concentrations 
+                at different depths and levels throughout the world, we can approximate pollution input rates and degradation 
+                constants. These data will help us determine our parameters for a coupled differential equation system so that 
+                we can model microplastic dynamics and coral reef population.</p>
+            <p>One limitation of our model that we found early on is that we cannot model the entire ocean while maintaining 
+                reasonably sized data sets. Thus, we decided to focus on the reefs surrounding Australia (the Great Barrier 
+                Reef, Ningaloo Reef, and Montgomery Reef) to perform our modeling. To do so, we will be relying on data 
+                collected by the Australian Institute of Marine Science [2], which includes detailed quantitative values 
+                representing reef size and health. However, since we will be limiting the scope of our project to a certain 
+                geographic region, our model will not be reliable for wider studies such as certain oceans or coral reefs 
+                located near other landmasses.</p>
+            <p>Our project will center around a python-based analysis of a system of differential equations extrapolated from the 
+                data sets outlined above. We will also utilize prior research to determine the carrying capacity of the reefs and 
+                model how deterministic interactions between microplastic accumulation and coral biomass evolve over time. We will 
+                implement this model using python’s scipy.integrate.solve, and we will visualize coral-pollutant interactions with 
+                matplot.lib. Our simulation results will demonstrate the critical thresholds surrounding coral reef collapse and 
+                microplastic levels.</p>
+
+        <h2>Intellectual Merit</h2>
+            <p>The objective of this project is to analyze the impact of microplastic pollution on Australian coral reef growth 
+                through analysis techniques introduced in BIOL300 and BIOL301. These techniques include statistical analysis, 
+                data analysis, and couple-differential equation models that resemble predator-prey models. Using these techniques, 
+                we will be able to find the rate constant of microplastic accumulation and coral reef capacity. Differential 
+                equations can also be used to explore the long-term, deterministic trends beyond random simulation, couple 
+                pollution and biological processes to further study equilibrium, resilience, and collapse thresholds.</p>
+            <p>The goal is to employ a quantitative analysis that elucidates the impact of microplastics on the Australian 
+                    coral reef ecosystem. Data and findings from this analysis have the potential to aid in educating the public 
+                    on the pressing issue of microplastic pollution, streamlining the implementation of strategies to reduce 
+                    current pollution threats.</p>
+
+        <h2>Broader Impacts</h2>
+            <p>The data analyzed and curated throughout this investigation are currently relevant and will continue to grow in 
+                relevancy in the near and distant future. Fish from these coral reefs are relied on by millions of people 
+                worldwide as a primary source of food [3]. The reef’s structures serve as diverse habitats for thousands of 
+                different fish, allowing for them to thrive and continue to escalate their populations. However, marine 
+                microplastic pollution serves as a major factor in the death of many coral and thus the depletion of fish 
+                populations. Australia serves as our principal reference point for microplastic pollution in the waters, 
+                specifically in the region of the Great Barrier Reef. As of June 2025, around 86% of the marine debris found 
+                around the reef was that of microplastics and a three year study has determined microplastic to be a chronic 
+                risk for marine organisms [4]. While the Great Barrier Reef is being affected by global warming and reef 
+                bleaching as well, the prevalence of microplastics and its growing threat is clear evidence of the necessity 
+                to reduce, reuse, and recycle. Education on the topic is everywhere, from social media to global news centers, 
+                however more education and further measures need to be taken to reduce the amount of microplastics flowing 
+                into the ocean from humans before the current pollution problem can truly be addressed.</p>
+        </div>
+
+        <!--Image Gallery Section-->
+        <div style="width: 29%; float: right;">
+            <figure>
+                <img src="Pictures/francesco-ungaro-XYMm4LRKZLE-unsplash.jpg" alt="A vibrant and healthy coral reef as seen below water">
+                <figcaption>Healthy Coral With Fish Swimming Around</figcaption>
+                <figcaption style="font-size: small;">Photo by <a href="https://unsplash.com/@francesco_ungaro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Francesco Ungaro</a> on Unsplash</figcaption>
+            </figure>
+
+            <div class="galdiv"></div>
+
+            <figure>
+                <img src="Pictures/5122082306_893c4e5126_o.jpg" alt="A large growth of coral, dead and dull">
+                <figcaption>Dead and Grey Coral With no Life to be Seen</figcaption>
+                <figcaption style="font-size: small;">“<a href="https://www.flickr.com/photos/silkebaron/5122082306" title="Dead Corals">Dead Corals</a>” by <a href="https://www.flickr.com/photos/silkebaron/">prilfish</a>, <a href="https://creativecommons.org/licenses/by/2.0/deed.en" rel="license noopener noreferrer">CC BY 2.0</a></figcaption>
+            </figure>
+
+            <div class="galdiv"></div>
+
+            <!--Rotating Gallery-->
+            <figure>
+                <img class="mySlides" src="Pictures/Microplastic Gallery/28738964953_0cf1755116_o.jpg">
+                <img class="mySlides" src="Pictures/Microplastic Gallery/28738965183_f897e6fe93_o.jpg">
+                <img class="mySlides" src="Pictures/Microplastic Gallery/29072756260_fee77d8220_o.jpg">
+                <img class="mySlides" src="Pictures/Microplastic Gallery/29072758120_07a4e10003_o.jpg">
+                <img class="mySlides" src="Pictures/Microplastic Gallery/29072756260_fee77d8220_o.jpg">
+                <img class="mySlides" src="Pictures/Microplastic Gallery/29072760080_69b46e6a0f_o.jpg">
+                <img class="mySlides" src="Pictures/Microplastic Gallery/29326674596_222458173b_o.jpg">
+                <figcaption>Microplastics Under a Microscope</figcaption>
+                <figcaption style="font-size: small;">“<a href="https://www.flickr.com/photos/gtmnerr/29072760080" title="Microplastics under a microscope">Microplastics under a microscope</a>” by <a href="https://www.flickr.com/photos/gtmnerr/">GTMNERR</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/deed.en" rel="license noopener noreferrer">CC BY-NC 2.0</a></figcaption>
+            </figure>
+            
+            <div class="galdiv"></div>
+
+        </div>
+    </div>
+
+
+    <!--Code for rotating gallery-->
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides"); // asign carousel images
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  // hide all
+            }
+            myIndex++; // next image
+            if (myIndex > x.length) {myIndex = 1} // reset if all images have been shown    
+            x[myIndex-1].style.display = "block";  // show one image at a time
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+
+
+</html> 
